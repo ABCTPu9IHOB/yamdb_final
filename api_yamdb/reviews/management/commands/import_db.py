@@ -1,15 +1,12 @@
 import os
 
-from api_yamdb.settings import BASE_DIR
 from django.core.management.base import BaseCommand
 
-from ._parser import category_parser
-from ._parser import comments_parser
-from ._parser import genre_parser
-from ._parser import genre_title_parser
-from ._parser import review_parser
-from ._parser import titles_parser
-from ._parser import users_parser
+from api_yamdb.settings import BASE_DIR
+
+from ._parser import (category_parser, comments_parser, genre_parser,
+                      genre_title_parser, review_parser, titles_parser,
+                      users_parser)
 
 
 class Command(BaseCommand):

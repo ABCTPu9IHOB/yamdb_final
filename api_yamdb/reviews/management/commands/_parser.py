@@ -1,7 +1,7 @@
 import csv
 
-from users.models import User
 from reviews.models import Category, Comment, Genre, Review, Title
+from users.models import User
 
 
 def users_parser(path):

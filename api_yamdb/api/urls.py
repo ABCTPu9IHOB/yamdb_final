@@ -1,11 +1,9 @@
 from django.urls import include, path
 from rest_framework.routers import SimpleRouter
 
-from api.views import (authenticatе, CategoryViewSet,
-                       CommentViewSet, GenresViewSet,
-                       ReviewViewSet, TitleViewSet,
-                       signup, UsersViewSet)
-
+from api.views import (CategoryViewSet, CommentViewSet, GenresViewSet,
+                       ReviewViewSet, TitleViewSet, UsersViewSet, authenticatе,
+                       signup)
 
 router = SimpleRouter()
 router.register('categories', CategoryViewSet)
