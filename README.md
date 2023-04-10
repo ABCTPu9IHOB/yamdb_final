@@ -1,4 +1,25 @@
 # yamdb_final
-![yamdb workflow](https://github.com/abctpu9ihob/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![yamdb_final workflow](https://github.com/abctpu9ihob/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-51.250.81.165
+http://51.250.81.165/redoc/
+
+### Краткое описание проекта
+Проект YaMDb собирает отзывы пользователей на произведения. Сами произведения в YaMDb не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
+
+### Запуск приложения в контейнерах
+
+Разверните проект:
+
+```cd infra/```
+```docker-compose up```
+Выполните миграции:
+```docker-compose exec web python manage.py migrate```
+[Опционально] Для быстрого наполнения базы тестовыми данными выполните команду:
+```docker-compose exec web python manage.py import_db```
+Создайте суперпользователя:
+```docker-compose exec web python manage.py createsuperuser```
+Собрать всю «статику» проекта:
+```docker-compose exec web python manage.py collectstatic --no-input```
+***
+### Авторы
+ABCTPu9IHOB
